@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
+import EntryDetails from './components/entries/EntryDetails';
+
 class App extends Component {
   render(){
     return(
@@ -9,7 +11,9 @@ class App extends Component {
         <div className="App">
           <Navbar></Navbar>
           <Switch>
-            <Route path='/' component={Dashboard}/>
+          <Route exact path='/' component={Dashboard}/>
+          <Route path='/entry/:id' component={EntryDetails}/>
+
           </Switch>
         </div>
       </BrowserRouter>
