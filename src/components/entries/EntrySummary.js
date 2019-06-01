@@ -9,6 +9,7 @@ const EntrySummary = ({entry, key}) => {
         <span className="card-title">{ entry.category }</span>
         <p>{ entry.location }</p>
         <p>{ entry.content }</p>
+        <p>{ entry.tags }</p>
       </div>
     </div>  
   ) 

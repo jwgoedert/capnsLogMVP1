@@ -8,6 +8,7 @@ class CreateEntry extends Component {
     location: '', 
     category: '',
     content: '',
+    tags:'',
   }
   handleSubmit = (e)=> {
     e.preventDefault();
@@ -42,6 +43,10 @@ class CreateEntry extends Component {
           <div className="input-field">
             <label htmlFor="content">Content</label>
             <textarea id="content" className="materialize-textarea" onChange={this.handleChange}/>
+          </div>
+          <div className="input-field">
+            <label htmlFor="tags">Tags</label>
+            <textarea id="tags" className="materialize-textarea" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
             <button className="btn pink lighten-1 z-depth-0">ditch</button>
