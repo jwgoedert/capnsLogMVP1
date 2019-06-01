@@ -8,6 +8,10 @@ const initState = {
 };
 
 const entryReducer = (state = initState, action) => {
+  switch(action.type){
+    case 'CREATE_ENTRY':
+      console.log('created entry!', action.entry);  
+  }
   return state;
 }
 
