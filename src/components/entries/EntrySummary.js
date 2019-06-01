@@ -1,12 +1,14 @@
 import React from 'react';
 
-const EntrySummary = () => {
+const EntrySummary = ({entry, key}) => {
+  // const { entry, key } = this.props;
   return(
     <div className="card z-depth-0 entry-summary">
       <div className="card-content grey-text text-darken-3">
-        <span className="card-title">Project Title</span>
-        <p>Posted By the Cap'n</p>
-        <p className="grey-text">3rd September, 2am</p>
+        <p className="grey-text">{ entry.date } </p>
+        <span className="card-title">{ entry.category }</span>
+        <p>{ entry.location }</p>
+        <p>{ entry.content }</p>
       </div>
     </div>  
   ) 
