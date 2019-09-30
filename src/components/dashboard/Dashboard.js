@@ -27,7 +27,9 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
   console.log('entries', state);
   return {
-    entries: state.entry.entries
+    // entries: state.entry.entries
+    entries: state.firestore.ordered.entries,
+    
   };
 }
 // export default compose(
@@ -36,5 +38,12 @@ const mapStateToProps = (state) => {
 //     { collection: 'entries' }
 //   ])
 // )(Dashboard);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([
+    { collection: 'entries', orderBy: ['createdAt', 'desc']},
+    // { collection: 'notifications', limit: 3, orderBy: ['time', 'desc']}
+  ])
+)(Dashboard)
 
-export default connect(mapStateToProps)(Dashboard);
+// export default connect(mapStateToProps)(Dashboard);

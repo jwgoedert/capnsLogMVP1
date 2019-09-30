@@ -5,7 +5,7 @@ import SignedInLinks from './SignedInLinks';
 
 const Navbar = () => {
   return (
-    <nav className="nav-wrapper grey darken-3">
+    <nav className="nav-wrapper yellow darken-2">
       <div className="container">
         <Link to='/' className="brand-logo left">
           Cap'n's Log

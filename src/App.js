@@ -9,6 +9,7 @@ import CreateEntry from './components/entries/CreateEntry';
 
 class App extends Component {
   render(){
+    console.log('app', this.state, this.props);
     return(
       <BrowserRouter>
         <div className="App">
