@@ -49,10 +49,8 @@ class CreateEntry extends Component {
             <textarea id="tags" className="materialize-textarea" onChange={this.handleChange}/>
           </div>
           <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">ditch</button>
-          </div>
-          <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">done</button>
+            <button className="waves-effect waves-teal btn-flat lighten-1 left z-depth-0">ditch</button>
+            <button className="waves-effect waves-light btn pink lighten-1 right z-depth-0">done</button>
           </div>
         </form>    
       </div>
