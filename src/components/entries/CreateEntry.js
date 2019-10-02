@@ -11,9 +11,10 @@ class CreateEntry extends Component {
     tags:'',
   }
   handleSubmit = (e)=> {
-    e.preventDefault();
+    // e.preventDefault();
     console.log('submit', this.state);
     this.props.createEntry(this.state);
+    this.props.history.push('/');
   }
 
   handleChange = (e)=> {
