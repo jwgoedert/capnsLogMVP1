@@ -1,5 +1,6 @@
 import React from 'react';
 import EntrySummary from './EntrySummary';
+import { Link } from 'react-router-dom';
 
 const EntryList = ({entries}) => {
   console.log('entriesin list', entries);
@@ -8,7 +9,9 @@ const EntryList = ({entries}) => {
       {entries && entries.map(entry => {
         console.log('entry', entry);
         return (
-          <EntrySummary entry={entry} key={entry.id}></EntrySummary>
+          <Link to={'/entry/' + entry.id} key={entry.id}>
+            <EntrySummary entry={entry} key={entry.id}></EntrySummary>
+          </Link>
         )
       }) }
     </div>
