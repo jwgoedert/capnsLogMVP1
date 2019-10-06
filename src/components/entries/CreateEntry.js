@@ -25,6 +25,7 @@ class CreateEntry extends Component {
   }
 
   render() {
+    console.log('props in create', this.props);
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
@@ -58,6 +59,11 @@ class CreateEntry extends Component {
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    auth: state.firebase.auth
+  }
+}
 
 const mapDispatchToProps = (dispatch) => {
   return(
@@ -67,4 +73,4 @@ const mapDispatchToProps = (dispatch) => {
   )
 }
 
-export default connect(null, mapDispatchToProps)(CreateEntry);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateEntry);

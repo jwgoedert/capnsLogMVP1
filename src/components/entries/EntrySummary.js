@@ -3,7 +3,7 @@ import moment from 'moment';
 
 const EntrySummary = ({entry, key}) => {
   // const { entry, key } = this.props;
-  console.log('entry in summary', entry);
+  // console.log('entry in summary', entry);
   return(
     <div className="card z-depth-0 entry-summary">
       <div className="card-content grey-text text-darken-3">

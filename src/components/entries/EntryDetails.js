@@ -30,9 +30,9 @@ import { Redirect } from 'react-router-dom'
 import moment from 'moment';
 
 const EntryDetails = (props)=> {
-	const { entry } = props
+	const { entry, auth } = props
 	// const id = props.match.params.id;
-	console.log('entry details', entry);
+	console.log('entry details', props);
 	if(entry){
 		return (
 			<div className="container section entry-details">
@@ -65,8 +65,10 @@ const mapStateToProps = (state, ownProps) => {
 	const entry = entries ? entries[id] : null;
 	return{
 		entry: entry,
+		auth: state.firebase.auth,
 	} 
 }
+
 export default compose (
 	connect(mapStateToProps),
 	firestoreConnect([{

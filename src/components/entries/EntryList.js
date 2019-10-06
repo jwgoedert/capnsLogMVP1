@@ -10,7 +10,7 @@ const EntryList = ({entries}) => {
         console.log('entry', entry);
         return (
           <Link to={'/entry/' + entry.id} key={entry.id}>
-            <EntrySummary entry={entry} key={entry.id}></EntrySummary>
+            <EntrySummary entry={entry}></EntrySummary>
           </Link>
         )
       }) }
