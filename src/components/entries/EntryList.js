@@ -7,7 +7,7 @@ const EntryList = ({entries}) => {
   return (
     <div className="project-list section">
       {entries && entries.map(entry => {
-        console.log('entry', entry);
+        {/* console.log('entry', entry); */}
         return (
           <Link to={'/entry/' + entry.id} key={entry.id}>
             <EntrySummary entry={entry}></EntrySummary>
